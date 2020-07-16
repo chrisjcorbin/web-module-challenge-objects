@@ -10,8 +10,11 @@ function createMenuItem(name, price, category){
     return {name, price, category};
 }
 
+console.log(createMenuItem('Jones Soda', 3, 'Drinks'));
+
 /* Task 1b: use your function to create 3 more menu items. You may add any items to the menu that you'd like */
-console.log(createMenuItem('Jones Soda', 8, 'Drinks'));
+
+console.log(createMenuItem('Raze Energy', 2, 'Drinks'));
 console.log(createMenuItem('Salami', 3, 'Lunch'));
 console.log(createMenuItem('Bacon', 5, 'Breakfast'));
 
@@ -26,7 +29,17 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+function burgerDisc(x){
+  if(x === 'teacher' || x === 'student'){
+    return burger.price - burger.price * .25;
+  }  else if (x === 'public'){
+    return burger.price - burger.price * .10;
+  } 
+}
 
+console.log(burgerDisc('teacher'));
+console.log(burgerDisc('student'));
+console.log(burgerDisc('public'));
 
 ///////////////Reviews (MVP)///////////////////
 
